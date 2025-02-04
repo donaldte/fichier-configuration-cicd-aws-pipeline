@@ -1,24 +1,32 @@
-# ci-cd-configurations-files
+### **# fichiers-de-configuration-ci-cd**  
 
-## Commands: We have used in Our Video
+## **Commandes utilisées dans notre vidéo**  
 
-
+```bash
 $ wget https://Bucket-name.s3.Region-identifier.amazonaws.com/latest/install
+```
 
+##### Ensuite, nous devons modifier les permissions du fichier d’installation que nous avons téléchargé avec la commande précédente :  
 
-##### Next up, we need to change the permission on the install file we will get after running the command above.
-
+```bash
 $ chmod +x ./install
+```
 
-##### Finally, to install the codedeploy-agent, run this command:
+##### Enfin, pour installer l’agent CodeDeploy, exécutez cette commande :  
 
+```bash
 $ sudo ./install auto > /tmp/logfile
+```
 
-###### Here we are logging the output of the installation to the /tmp/logfile file. To check if the codedeploy-agent is running, enter this command:
+###### Ici, nous enregistrons la sortie de l’installation dans le fichier `/tmp/logfile`. Pour vérifier si l’agent CodeDeploy est en cours d’exécution, entrez cette commande :  
+
+```bash
 $ sudo service codedeploy-agent status
+```
 
-###### If it is not running, enter this command to start the codedeploy-agent service:
+###### S'il n'est pas en cours d'exécution, utilisez cette commande pour démarrer le service CodeDeploy-agent :  
 
-$ sudo service codedeploy-agent status
-
+```bash
+$ sudo service codedeploy-agent start
+```
 
